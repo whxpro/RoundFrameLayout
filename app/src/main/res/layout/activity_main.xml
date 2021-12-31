@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.whx.roundframelayout.RoundFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:background="#DDDDDD"
+    app:rfl_radius="20dp">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/test_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="4dp"
+                android:padding="10dp"
+                android:text="abcde fgh ijklmn opqrst uvw xyz"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/fold_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="fold" />
+
+            <Button
+                android:id="@+id/to_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="list" />
+
+            <EditText
+                android:id="@+id/top_left_radius"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="top left radius" />
+
+            <Button
+                android:id="@+id/change_corner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="change" />
+
+
+            <com.whx.roundframelayout.RoundFrameLayout
+                android:id="@+id/round_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="20dp"
+                android:visibility="visible"
+                app:rfl_bottomLeft_radius="20dp"
+                app:rfl_bottomRight_radius="20dp"
+                app:rfl_topRight_radius="20dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/header" />
+            </com.whx.roundframelayout.RoundFrameLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</com.whx.roundframelayout.RoundFrameLayout>
